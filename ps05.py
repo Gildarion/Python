@@ -9,11 +9,12 @@ calendar = [31, 28, 31, 30, 31, 30, 31, 31, 31, 30, 31]
 name = input("What is your name? ")
 print("Hi ", name, ". It's a pleasure")
 
-days = dayActual
+i = 0
+days += daysActual
 
-for i in range(0, (monthActual -1)):
+while (i < montActual - 1):
     days += int(calendar[i])
-
+    i += 1
 
 born = int(input("How old are you? "))
 born = yearActual - born
@@ -25,7 +26,3 @@ print("The probability that you born in ", born,
 
 if(prob < 60):
     print("So, maybe, you born in ", born - 1)
-
-
-
-    
