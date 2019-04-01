@@ -1,9 +1,10 @@
 i = 0
+maxIndex = 2
 num = [0,0]
 
 #Input
 print("The numbers will be divide by 10")
-while(i < 2):
+while(i < maxIndex):
     try:
         num[i] = int(input("Please enter a number: "))
         i+=1
@@ -28,7 +29,7 @@ except:
 
 i = 0
 
-while(i < 2):
+while(i < maxIndex):
     num[i] = "{0:0.2f}".format(float(num[i]))
     i+=1
 
