@@ -16,12 +16,10 @@ sub1 = num[1] - num[0]
 mul = num[0] * num[1]
 try:
     div0 = num[0] / num[1]
-    div0 = "{0.0.2f}".format(div0)
 except:
     div0 = "Operation Invalid"
 try:
     div1 = num[1] / num[0]
-    div1 = "{0.0.2f}".format(div1)
 except:
     div1 = "Operation Invalid"
 
@@ -31,5 +29,11 @@ print(num[0], " + ", num[1], " = ", add)
 print(num[0], " - ", num[1], " = ", sub0)
 print(num[1], " - ", num[0], " = ", sub1)
 print(num[0], " * ", num[1], " = ", mul)
-print(num[0], " / ", num[1], " = ", div0)
-print(num[1], " / ", num[0], " = ", div1)
+try:
+    print(num[0], " / ", num[1], " = ", "{0:0.2f}".format(div0))
+except:
+    print(num[0], " / ", num[1], " = ", div0)
+try:
+    print(num[1], " / ", num[0], " = ", "{0:0.2f}".format(div1))
+except:
+    print(num[1], " / ", num[0], " = ", div1)
