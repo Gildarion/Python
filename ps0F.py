@@ -3,7 +3,7 @@ num = [0,0]
 
 #Input
 print("The numbers will be divide by 10")
-while(not(i == 2)):
+while(i < 2):
     try:
         num[i] = int(input("Please enter a number: "))
         i+=1
@@ -26,20 +26,23 @@ try:
 except:
     div1 = "Operation Invalid"
 
-num[0] = "{0:0.2f}".format(float(num[0]))
-num[1] = "{0:0.2f}".format(float(num[1]))
+i = 0
+
+while(i < 2):
+    num[i] = "{0:0.2f}".format(float(num[i]))
+    i+=1
 
 #Output
 print("The operations between both numbers are: ")
-print(num[0], " + ", num[1], " = ", "{0:0.2f}".format(add))
-print(num[0], " - ", num[1], " = ", "{0:0.2f}".format(sub0))
-print(num[1], " - ", num[0], " = ", "{0:0.2f}".format(sub1))
-print(num[0], " * ", num[1], " = ", "{0:0.2f}".format(mul))
+print("  ", num[0], " + ", num[1], " = ", "{0:0.2f}".format(add))
+print("  ", num[0], " - ", num[1], " = ", "{0:0.2f}".format(sub0))
+print("  ", num[1], " - ", num[0], " = ", "{0:0.2f}".format(sub1))
+print("  ", num[0], " * ", num[1], " = ", "{0:0.2f}".format(mul))
 try:
-    print(num[0], " / ", num[1], " = ", "{0:0.2f}".format(div0))
+    print("  ", num[0], " / ", num[1], " = ", "{0:0.2f}".format(div0))
 except:
-    print(num[0], " / ", num[1], " = ", div0)
+    print("  ", num[0], " / ", num[1], " = ", div0)
 try:
-    print(num[1], " / ", num[0], " = ", "{0:0.2f}".format(div1))
+    print("  ", num[1], " / ", num[0], " = ", "{0:0.2f}".format(div1))
 except:
-    print(num[1], " / ", num[0], " = ", div1)
+    print("  ", num[1], " / ", num[0], " = ", div1)
