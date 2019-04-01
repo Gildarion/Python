@@ -2,14 +2,17 @@ i = 0
 num = [0,0]
 
 #Input
+print("The numbers will be divide by 10")
 while(not(i == 2)):
     try:
-        num[i] = int(input("Please enter number: "))
+        num[i] = int(input("Please enter a number: "))
         i+=1
     except:
         print("Please insert a int number")
 
 #Data processing
+num[0] = num[0] / 10
+num[1] = num[1] /10
 add = num[0] + num[1]
 sub0 = num[0] - num[1]
 sub1 = num[1] - num[0]
@@ -23,12 +26,15 @@ try:
 except:
     div1 = "Operation Invalid"
 
+num[0] = "{0:0.2f}".format(float(num[0]))
+num[1] = "{0:0.2f}".format(float(num[1]))
+
 #Output
 print("The operations between both numbers are: ")
-print(num[0], " + ", num[1], " = ", add)
-print(num[0], " - ", num[1], " = ", sub0)
-print(num[1], " - ", num[0], " = ", sub1)
-print(num[0], " * ", num[1], " = ", mul)
+print(num[0], " + ", num[1], " = ", "{0:0.2f}".format(add))
+print(num[0], " - ", num[1], " = ", "{0:0.2f}".format(sub0))
+print(num[1], " - ", num[0], " = ", "{0:0.2f}".format(sub1))
+print(num[0], " * ", num[1], " = ", "{0:0.2f}".format(mul))
 try:
     print(num[0], " / ", num[1], " = ", "{0:0.2f}".format(div0))
 except:
