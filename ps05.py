@@ -10,11 +10,13 @@ name = input("What is your name? ")
 print("Hi ", name, ". It's a pleasure")
 
 i = 0
-days += daysActual
+days = 0
 
-while (i < montActual - 1):
+while (i < monthActual - 1):
     days += int(calendar[i])
     i += 1
+days += dayActual
+
 
 born = int(input("How old are you? "))
 born = yearActual - born
