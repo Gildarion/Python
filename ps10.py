@@ -1,12 +1,13 @@
 from validation import *
 
-strBase = input ("Please insert the base of the triangle: ")
-while not isDecimal(strBase):
-    base = input ("ERROR!- Base is not a decimal.\n Insert a decimal number: ")
+def inputSide(message):
+    strSide = input (message)
+    while not isDecimal(strSide):
+         strSide= input ("ERROR!- Base is not a decimal.\n Insert a decimal number: ")
+    return strSide
 
-strHeight = input("Please insert the height of the triangle: ")
-while not isDecimal(strHeight):
-    strHeight = input("ERROR!- Height is not a decimal.\n Insert a decimal number:")
+strBase = inputSide("Please insert the base of the triangle: ")
+strHeight = inputSide("Please insert the height of the triangle: ")
 
 fltBase = float(changeComma(strBase))
 fltHeight = float(changeComma(strHeight))
@@ -14,4 +15,4 @@ fltHeight = float(changeComma(strHeight))
 area = (fltBase * fltHeight) / 2
 
 
-print("The area of the triangle is ", "{0:0.2f}".format(area))
+print("The area of the triangle is ", round(area,2))
