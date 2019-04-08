@@ -42,15 +42,32 @@ def askAge(message):
     age = int(strAge)  
     return age
 
-intTotal = 0
-line = 4
+def outputScreen():
+    screen.locate(4,1)
+    #len of this 17
+    print("Baby tickets...: ")
+    print("Kid tickets:...: ")
+    print("Adult tickets:.: ")
+    print("Retired tickets: ")
+
+def posLine(price):
+    if price == 0:
+        return 4
+    elif price == 14:
+        return 5
+    elif price == 6:
+        return 6
+    else:
+        return 7
 
 screen.clearScreen()
+outputScreen()
 
 age = askAge("Introduce the group member age: ")
 
 while age != 0:
     intTicket = calculateTicket(age)
+
     intTotal += intTicket
     screen.locateCursor(line, 1)
     print("Ticket {}".format(intTicket))
