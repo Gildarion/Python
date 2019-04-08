@@ -64,12 +64,15 @@ def askAge(message):
 
 def outputScreen():
     screen.clearScreen()
+    screen.reset()
     screen.printMsg("Baby    tickets....: 00 - ", 5, 5)
     screen.printMsg("Kid     tickets....: 00 - ", 6, 5)
     screen.printMsg("Adult   tickets....: 00 - ", 7, 5)
     screen.printMsg("Retired tickets....: 00 - ", 8, 5)
+    screen.formatMsg(1, 40, 37)
     screen.printMsg("Total......: ", 10, 13)
-
+    screen.reset()
+    
 def typeTicket(price):
     if price == 0:
         return "baby"

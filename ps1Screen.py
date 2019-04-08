@@ -20,7 +20,9 @@ def printError(message, line = 25):
     error = "ERROR - " + message
     locateCursor(line,1)
     clearLine(line)
-    print("\033[1;37;40m{}".format(error), end = "")
+    formatMsg(0,33,41)
+    printMsg(error, line)
+    reset()
 
 def inputMsg(message, line, column = 1, delEnd = True):
     locateCursor(line, column)
@@ -33,3 +35,10 @@ def printMsg(message, line, column = 1, delEnd = False):
     if delEnd:
         clearLine(line)
     print(message, end = "")   
+
+def formatMsg(style, colorText = 37, colorBackground = 40):
+    print("\033[{};{};{}m".\
+            format(style, colorText, colorBackground), end = "")
+
+def reset():
+    formatMsg(0, 37, 40)
