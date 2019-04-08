@@ -1,5 +1,3 @@
-import ps1Screen as screen
-
 def calculateTicket(age):
     if age <= 2:
         price =  0
@@ -12,7 +10,6 @@ def calculateTicket(age):
     return price
 
 def validateIntPos(cadena):
-
     try:
        n = int(cadena)
        if n >= 0:
@@ -21,14 +18,10 @@ def validateIntPos(cadena):
            result = -1
     except:
         result = -2
-
     return result
 
 def askAge(message):
     intError = -1
-
-    screen.locateCursor(1,1)
-
     while intError != 0:
         strAge = input(message)
         intError = validateIntPos(strAge) 
@@ -38,24 +31,18 @@ def askAge(message):
             print("ERROR - Age must be a interger")
         else:
             intError = 0
-
     age = int(strAge)  
     return age
 
+#main
 intTotal = 0
-line = 4
-
-screen.clearScreen()
 
 age = askAge("Introduce the group member age: ")
 
 while age != 0:
     intTicket = calculateTicket(age)
     intTotal += intTicket
-    screen.locateCursor(line, 1)
     print("Ticket {}".format(intTicket))
     age = askAge("Introduce the group member age: ")
-    line += 1
 
-screen.locateCursor(line, 1)
 print("Total: {}".format(intTotal))
