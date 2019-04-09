@@ -1,3 +1,5 @@
+#dict with color
+
 def clearScreen():
     print("\033[2J")
 
@@ -30,7 +32,9 @@ def inputMsg(message, line, column = 1, delEnd = True):
         clearLine(line)
     return input(message)
 
-def printMsg(message, line, column = 1, delEnd = False):
+#def printMsg(message, line, column = 1, delEnd = False):
+# param : color, line, column, nr, style
+def printMsg(message, **params):
     locateCursor(line, column)
     if delEnd:
         clearLine(line)
