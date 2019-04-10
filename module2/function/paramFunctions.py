@@ -10,5 +10,3 @@ def sumAll(limitTo, f):
         result += f(i)
     return result
 
-print(sumAll(100, normal))
-print(sumAll(3, square))
