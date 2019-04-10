@@ -10,3 +10,6 @@ def sumAll(limitTo, f):
         result += f(i)
     return result
 
+if __name__ == "__main__":
+    print(sumAll(10,normal))
+    print(sumAll(3,square))
